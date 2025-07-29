@@ -37,8 +37,18 @@
        git clone https://github.com/Fr1ngg/renmawave-template-xreychecker-redirect-minimal.git
    
 6) В index.html меняем /metrics на страницу с метрикой, либо /metrics оставить, если панель и xray-chacker подняты на одном сервере
-   const res = await fetch('/metrics');
-7) рестартим docker
+
+       const res = await fetch('/metrics');
+
+7) подключаем наши файлы + app-config.json в docker-compuse.yml 
+
+       remnawave-subscription-page:
+         volumes:
+           - ./index.html:/opt/app/frontend/index.html
+           - ./app-config.json:/opt/app/frontend/assets/app-config.json
+           - ./redirect-page:/opt/app/frontend/redirect-page
+   
+9) рестартим docker
    
        docker compose down
        docker compose up -d
