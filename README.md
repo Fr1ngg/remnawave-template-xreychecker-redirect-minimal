@@ -1,4 +1,12 @@
 # renmawave-template-xreychecker-redirect-minimal
+<img width="318" height="695" alt="Снимок экран" src="https://github.com/user-attachments/assets/e77b9c93-3df0-494b-baa9-e21a058577db" />
+<img width="318" height="695" alt="Снимок экран" src="https://github.com/user-attachments/assets/aff37516-6b20-4a02-a182-8695018a69a8" />
+<img width="318" height="695" alt="Снимок экран" src="https://github.com/user-attachments/assets/1b71f829-2f34-42ba-89e0-79638d8992ed" />
+<img width="318" height="695" alt="Снимок экран" src="https://github.com/user-attachments/assets/9849dbe9-4115-43f6-ad95-9f0f6129057d" />
+<img width="318" height="695" alt="Снимок экран" src="https://github.com/user-attachments/assets/5a2787fc-bddb-4d6f-a0c2-13ac597aac4c" />
+
+
+
 Шаблончик страницы подписки, который подтягивает статус серверов из xrey-check + редиректит ссылки 
 (Возможность использовать собственную или внешнюю страницу переадресации (актуально для Telegram Mini App, например в стиле Orion — [демо](https://github.com/legiz-ru/Orion/blob/main/docs/redirect-page/index.html))
 
