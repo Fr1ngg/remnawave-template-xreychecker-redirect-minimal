@@ -28,7 +28,7 @@
 
        git clone https://github.com/Fr1ngg/renmawave-template-xreychecker-redirect-minimal.git
    
-6) В index.html меняем /metrics на страницу с метрикой, либо /metrics оставить если панель и xray-chacker подняты на одном сервере
+6) В index.html меняем /metrics на страницу с метрикой, либо /metrics оставить, если панель и xray-chacker подняты на одном сервере
    const res = await fetch('/metrics');
 7) рестартим docker
    
