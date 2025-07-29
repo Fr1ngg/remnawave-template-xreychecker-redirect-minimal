@@ -1,7 +1,8 @@
 # renmawave-template-xreychecker-redirect-minimal
 Шаблончик страницы подписки, который подтягивает статус серверов из xrey-check + редиректит ссылки 
 (Возможность использовать собственную или внешнюю страницу переадресации (актуально для Telegram Mini App, например в стиле Orion — [демо](https://github.com/legiz-ru/Orion/blob/main/docs/redirect-page/index.html))
-Частично дергал отсюда https://github.com/legiz-ru/Orion
+
+Частично дергал отсюда, доработал визуал+скрипты https://github.com/legiz-ru/Orion
 
 # Установка 
 1) Поднимаем Xray-Checker https://github.com/kutovoys/xray-checker
