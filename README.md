@@ -6,8 +6,6 @@
 <img width="318" height="695" alt="Снимок экран" src="https://github.com/user-attachments/assets/5a2787fc-bddb-4d6f-a0c2-13ac597aac4c" />
 
 
-![TestLogo](./assets/logo5.svg)
-
 
 Шаблончик страницы подписки, который подтягивает статус серверов+протоколы из xrey-checker'a и сопоставляет их с серверами на странице по имени + редиректит ссылки (Возможность использовать собственную или внешнюю страницу переадресации (актуально для Telegram Mini App, например в стиле Orion — [демо](https://github.com/legiz-ru/Orion/blob/main/docs/redirect-page/index.html))
 
