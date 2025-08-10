@@ -1,0 +1,223 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Градиенты -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#2d2d5a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0099ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="containerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.08);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(0,255,255,0.05);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.02);stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glowRadial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Фильтры -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#00ffff" flood-opacity="0.4"/>
+    </filter>
+
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="960" height="540" fill="url(#bgGradient)"/>
+  
+  <!-- Фоновое свечение -->
+  <ellipse cx="480" cy="270" rx="400" ry="200" fill="url(#glowRadial)" opacity="0.3"/>
+
+  <!-- Основной контейнер -->
+  <rect x="150" y="120" width="660" height="300" rx="30" ry="30" 
+        fill="url(#containerGradient)" 
+        stroke="rgba(0,255,255,0.4)" 
+        stroke-width="2" 
+        filter="url(#shadow)"/>
+
+  <!-- Левая сторона - щит -->
+  <g transform="translate(320, 270)">
+    <!-- Основа щита -->
+    <path d="M0 -60 L45 -40 L45 15 C45 45 0 65 0 65 C0 65 -45 45 -45 15 L-45 -40 Z" 
+          fill="url(#shieldGradient)" 
+          filter="url(#glow)"/>
+    
+    <!-- Замок внутри щита -->
+    <rect x="-20" y="-15" width="40" height="45" rx="4" fill="white" opacity="0.95"/>
+    <path d="M-12 -15 C-12 -25 -6 -32 0 -32 C6 -32 12 -25 12 -15" 
+          stroke="white" 
+          stroke-width="4" 
+          fill="none" 
+          opacity="0.95"/>
+    
+    <!-- Точка замка -->
+    <circle cx="0" cy="5" r="4" fill="#0066ff"/>
+    <rect x="-2" y="10" width="4" height="12" fill="#0066ff"/>
+    
+    <!-- Анимированные частицы безопасности -->
+    <g opacity="0.8">
+      <circle cx="-55" cy="-25" r="3" fill="#00ffff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
+      </circle>
+      <circle cx="55" cy="-15" r="3" fill="#00ffff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+      </circle>
+      <circle cx="-40" cy="35" r="2.5" fill="#00ffff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+      </circle>
+      <circle cx="40" cy="30" r="2.5" fill="#00ffff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="-30" cy="-50" r="2" fill="#00ffff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="35" cy="-45" r="2" fill="#00ffff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Правая сторона - текст -->
+  <g transform="translate(640, 270)">
+    <!-- Текст "Fring" -->
+    <text x="0" y="-20" 
+          font-family="Arial, sans-serif" 
+          font-size="72" 
+          font-weight="bold" 
+          fill="url(#textGradient)" 
+          filter="url(#textGlow)"
+          text-anchor="middle"
+          dominant-baseline="middle">Fring</text>
+
+    <!-- Текст "VPN" -->
+    <text x="0" y="30" 
+          font-family="Arial, sans-serif" 
+          font-size="28" 
+          font-weight="normal" 
+          fill="#00ffff" 
+          opacity="0.9"
+          letter-spacing="8px"
+          text-anchor="middle"
+          dominant-baseline="middle">VPN</text>
+
+    <!-- Подзаголовок -->
+    <text x="0" y="60" 
+          font-family="Arial, sans-serif" 
+          font-size="16" 
+          font-weight="normal" 
+          fill="rgba(255,255,255,0.6)" 
+          text-anchor="middle"
+          dominant-baseline="middle">SECURE • FAST • RELIABLE</text>
+  </g>
+
+  <!-- Соединительные линии между щитом и текстом -->
+  <g opacity="0.4">
+    <path d="M380 240 Q480 220 540 240" stroke="#00ffff" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;200,0;0,200" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M380 270 Q480 270 540 270" stroke="#00ffff" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="200,0;100,100;0,200;200,0" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M380 300 Q480 320 540 300" stroke="#00ffff" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;200,0;0,200" dur="4s" repeatCount="indefinite" begin="2s"/>
+    </path>
+  </g>
+
+  <!-- Декоративные элементы в углах -->
+  <g opacity="0.3">
+    <!-- Левый верх -->
+    <g transform="translate(180, 150)">
+      <circle cx="0" cy="0" r="3" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="0s"/>
+      </circle>
+      <circle cx="15" cy="8" r="2" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      <circle cx="8" cy="20" r="2.5" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+    </g>
+    
+    <!-- Правый верх -->
+    <g transform="translate(780, 150)">
+      <circle cx="0" cy="0" r="3" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+      </circle>
+      <circle cx="-15" cy="8" r="2" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="-8" cy="20" r="2.5" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+      </circle>
+    </g>
+    
+    <!-- Левый низ -->
+    <g transform="translate(180, 390)">
+      <circle cx="0" cy="0" r="3" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+      </circle>
+      <circle cx="12" cy="-10" r="2" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+      </circle>
+    </g>
+    
+    <!-- Правый низ -->
+    <g transform="translate(780, 390)">
+      <circle cx="0" cy="0" r="3" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+      </circle>
+      <circle cx="-12" cy="-10" r="2" fill="#00ffff">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="1.7s"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Внешние границы свечения -->
+  <rect x="150" y="120" width="660" height="300" rx="30" ry="30" 
+        fill="none" 
+        stroke="rgba(0,255,255,0.6)" 
+        stroke-width="1" 
+        opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Дополнительные световые эффекты по периметру -->
+  <g opacity="0.2">
+    <ellipse cx="480" cy="270" r="350" ry="180" fill="none" stroke="#00ffff" stroke-width="1">
+      <animate attributeName="rx" values="330;370;330" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="160;200;160" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+</svg>
